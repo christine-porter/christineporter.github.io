@@ -1,0 +1,47 @@
+#header-crest {
+	text-align: center;
+}
+#header-crest img {
+	height:300px;
+	margin: 100px 0 50px 0;
+}
+.navbar-brand {
+	font-family: 'garamond', serif;
+    color: white !important;
+    font-size: 24px;
+    line-height: 30px;
+    margin: 15px 0;
+}
+#main-menu {
+	border-radius:unset;
+}
+#main-menu .navbar-nav {
+	margin: 15px 0;
+}
+.container {
+	max-width:1300px;
+}
+#page-footer {
+	margin-top:100px;
+	background:cornsilk;
+	min-height:150px;
+}
+#page-content {
+	margin-top: 50px;
+}
+#footer-links {
+	list-style-type: none;
+}
+#footer-links li,
+#page-footer td {
+	text-align:center;
+}
+#page-footer .container {
+	padding-top:10px;
+}
+#skip-link {
+	color:white;
+}
+#skip-link:focus {
+	background:blue;
+}
