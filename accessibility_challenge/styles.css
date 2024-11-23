@@ -25,6 +25,7 @@
 	margin-top:100px;
 	background:cornsilk;
 	min-height:150px;
+	width:100%;
 }
 #page-content {
 	margin-top: 50px;
@@ -33,11 +34,6 @@
 	list-style-type: none;
 }
 #footer-links li,
-#page-footer table {
-	display:flex;
-	flex-wrap:wrap;
-	width:100%;
-}
 #page-footer td {
 	text-align:center;
 }
