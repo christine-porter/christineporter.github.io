@@ -25,6 +25,7 @@
 	margin-top:100px;
 	background:cornsilk;
 	min-height:150px;
+	overflow-x:auto;
 }
 #page-content {
 	margin-top: 50px;
@@ -33,9 +34,6 @@
 	list-style-type: none;
 }
 #footer-links li,
-#page-footer {
-	overflow-x:auto;
-}
 #page-footer td {
 	text-align:center;
 }
