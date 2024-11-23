@@ -25,8 +25,6 @@
 	margin-top:100px;
 	background:cornsilk;
 	min-height:150px;
-	display:flex;
-	flex-wrap:wrap;
 }
 #page-content {
 	margin-top: 50px;
@@ -35,11 +33,21 @@
 	list-style-type: none;
 }
 #footer-links li,
+#page-footer table {
+	display:flex;
+	flex-wrap:wrap;
+	width:100%;
+}
 #page-footer td {
 	text-align:center;
 }
 #page-footer .container {
 	padding-top:10px;
+}
+#page-footer a,
+.col-md-4 a {
+	text-decoration:underline;
+	color: #1348c3;
 }
 #skip-link {
 	color:white;
@@ -47,9 +55,4 @@
 #skip-link:focus {
 	background:blue;
 	padding:5px;
-}
-#page-footer a,
-.col-md-4 a {
-	text-decoration:underline;
-	color: #1348c3;
 }
