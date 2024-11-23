@@ -44,4 +44,10 @@
 }
 #skip-link:focus {
 	background:blue;
+	padding:5px;
+}
+#page-footer a,
+.col-md-4 a {
+	text-decoration:underline;
+	color: #1348c3;
 }
