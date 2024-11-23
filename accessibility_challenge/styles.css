@@ -33,6 +33,9 @@
 	list-style-type: none;
 }
 #footer-links li,
+#page-footer {
+	overflow-x:auto;
+}
 #page-footer td {
 	text-align:center;
 }
