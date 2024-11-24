@@ -44,9 +44,9 @@ function changeColor() {
     
     //If the random color is white, make footer the original color
     if (R == 255 && G == 255 && B == 255){
-        RR = 255;
-        GG = 248;
-        BB = 220;
+        RR = 242;
+        GG = 230;
+        BB = 184;
     }
 
     document.body.style.backgroundColor = 'rgb('+R+', '+G+', '+B+')';
