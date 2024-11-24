@@ -1,9 +1,9 @@
 //Changes the background to a random color that complies with accessibility guidelines
-function changeColor() {
+function changeColor(){
     var accessibleColor = false;
     
     //Randomize colors until an accessible one is found
-    while (accessibleColor == false) {
+    while (accessibleColor == false){
         
         //Assign each RGB channel with a random value between 0 and 255
         var R = Math.floor(Math.random() * 256);
@@ -20,35 +20,28 @@ function changeColor() {
         if (sum > 425){
             
             //If there are high values, check that the color isn't a neon because neons may cause eyestrain
-            if (R >= 200 || G >= 200 || B >= 200) {
-                if (checkNotNeon(R, G, B) == true && checkNotNeon(G, R, B) == true && checkNotNeon(B, R, G) == true)
-                {
+            if (R >= 200 || G >= 200 || B >= 200){
+                if (checkNotNeon(R, G, B) == true && checkNotNeon(G, R, B) == true && checkNotNeon(B, R, G) == true){
+                    
                     //I want to match the footer by making each value a bit darker, so I have to check that this color will still be acessible when darkened
-                    if ((checkNotNeon(RR, GG, BB) == true && checkNotNeon(GG, RR, BB) == true && checkNotNeon(BB, RR, GG) == true) && (sum-(decrement*3) > 425))
-                        {
+                    if ((checkNotNeon(RR, GG, BB) == true && checkNotNeon(GG, RR, BB) == true && checkNotNeon(BB, RR, GG) == true) && (sum-(decrement*3) > 425)){
                             accessibleColor = true;
                         }
                 }
             }
+            
             //If no values are > 200 and the sum is > 425, it is accessible
             else {
                 //Make sure the footer is not too dark
-                if (sum-(decrement*3) > 425)
-                    {
+                if (sum-(decrement*3) > 425){
                         accessibleColor = true;
                     }
             }
         }
         
     }
-    
-    //If the random color is white, make footer the original color
-    if (R == 255 && G == 255 && B == 255){
-        RR = 242;
-        GG = 230;
-        BB = 184;
-    }
 
+    //Apply the new color to the background, footer, and the hidden "skip to main content" text
     document.body.style.backgroundColor = 'rgb('+R+', '+G+', '+B+')';
     document.getElementById('skip-link').style.color = 'rgb('+R+', '+G+', '+B+')';
     document.getElementById('page-footer').style.background = 'rgb('+RR+', '+GG+', '+BB+')';
@@ -70,7 +63,7 @@ function checkNotNeon(A, B, C){
     }
 }
 
-//Darkens a given color by 20 units. Can not go below 0.
+//Darkens a given color by a specified number of units. Can not go below 0.
 function darkenColor(color, decrement){
     var newColor = color - decrement;
     
